@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    table, th, td {
+      outline: 1px solid black;
+    }
+    </style>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to my wesite showing a collection of DevOps terms and their brief descriptions</p>
+    <table>
+
+      <tr>
+        <th><b>ID#</b></th>
+        <th><b>Term</b></th>
+        <th><b>Description</b></th>
+        <th><b>reference</b></th>
+      </tr>
+
+      
+      <% items.forEach((item) => { %>
+      <tr>
+        <td>
+          <%= item.id %>
+        </td>
+        <td>
+          <%= item.term %>
+        </td>
+        <td>
+          <%= item.description %>
+        </td>
+        <td>
+          <%= item.reference %>
+        </td>
+
+      </tr>
+
+    <%}); %>
+    </table>
+  </body>
+</html>
